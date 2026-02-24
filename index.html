@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrei Marius Badea | Portfolio</title>
+    <meta name="description"
+        content="Portfolio profesional de Andrei Marius Badea - Estudiante de ASIR especializado en infraestructuras y sistemas.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        accent: { primary: '#00f2ff', secondary: '#7000ff' },
+                        dark: { bg: '#05070a' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark-bg text-slate-200">
+    <!-- Background Blobs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div
+            class="blob absolute -top-[200px] -left-[200px] w-[600px] h-[600px] bg-accent-primary/20 rounded-full blur-[100px]">
+        </div>
+        <div
+            class="blob absolute -bottom-[200px] -right-[200px] w-[600px] h-[600px] bg-accent-secondary/20 rounded-full blur-[100px]">
+        </div>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 w-full z-40 transition-all duration-300 py-6">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tighter">AM<span
+                    class="text-accent-primary">B</span></a>
+            <ul class="hidden md:flex gap-8 text-sm font-medium opacity-80">
+                <li><a href="#hero" class="hover:text-accent-primary transition-colors">Inicio</a></li>
+                <li><a href="#experience" class="hover:text-accent-primary transition-colors">Experiencia</a></li>
+                <li><a href="#projects" class="hover:text-accent-primary transition-colors">Proyectos</a></li>
+                <li><a href="#education" class="hover:text-accent-primary transition-colors">Formación</a></li>
+                <li><a href="#skills" class="hover:text-accent-primary transition-colors">Habilidades</a></li>
+                <li><a href="#contact" class="hover:text-accent-primary transition-colors">Contacto</a></li>
+            </ul>
+            <div class="md:hidden cursor-pointer" id="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center relative px-6">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="max-w-3xl">
+                    <h2 class="reveal text-accent-primary font-bold uppercase tracking-[0.3em] mb-4 text-sm">Hola, soy
+                    </h2>
+                    <h1 class="reveal text-5xl md:text-8xl font-black leading-tight mb-6">Andrei Marius <br><span
+                            class="text-accent-primary">Badea</span></h1>
+                    <p class="reveal text-lg md:text-xl opacity-70 mb-10 leading-relaxed">
+                        Un chico apasionado por la informática y estudiante de ASIR. Me encanta cacharrear con
+                        servidores, montar redes y estar siempre aprendiendo cosas nuevas sobre el mundo de la
+                        tecnología.
+                    </p>
+                    <div class="reveal flex flex-wrap gap-4">
+                        <a href="#experience"
+                            class="px-8 py-4 bg-gradient-to-r from-accent-primary to-accent-secondary rounded-full font-bold shadow-lg hover:scale-105 transition-transform">Ver
+                            Experiencia</a>
+                        <a href="Currículum Andrei.pdf" download
+                            class="px-8 py-4 border border-white/10 rounded-full font-bold hover:bg-white/5 transition-colors text-white">Descargar
+                            CV (PDF)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                <div class="scroll-mouse"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-black mb-16 gradient-text">Proyectos Destacados</h2>
+                <div
+                    class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-[2rem] reveal text-left relative overflow-visible">
+                    <span class="tag">Infraestructura & Sistemas</span>
+                    <h3 class="text-3xl md:text-4xl font-black mb-6 tracking-tight">CEROWAIT</h3>
+                    <p class="text-lg opacity-70 mb-8 max-w-2xl">Plataforma SaaS de gestión de reservas. Un entorno
+                        diseñado para ser eficiente y escalable mediante el uso de tecnologías de virtualización y
+                        automatización.</p>
+
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="has-tooltip tech-badge"
+                            data-tooltip="Virtualización: Alojado en servidor propio para gestión de contenedores y VMs.">Proxmox</span>
+                        <span class="has-tooltip tech-badge"
+                            data-tooltip="Orquestación: Cluster ligero para alta disponibilidad de microservicios.">K3s</span>
+                        <span class="has-tooltip tech-badge"
+                            data-tooltip="Automatización: Configuración de nodos y despliegues automatizada con Ansible.">Ansible</span>
+                        <span class="has-tooltip tech-badge"
+                            data-tooltip="IaC: Infraestructura definida como código para despliegues repetibles con Terraform.">Terraform</span>
+                        <span class="has-tooltip tech-badge"
+                            data-tooltip="Contenedores: Empaquetado de apps para portabilidad absoluta con Docker.">Docker</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://app.cerowait.com" target="_blank"
+                            class="px-6 py-3 bg-gradient-to-r from-accent-primary to-accent-secondary rounded-full font-bold text-sm hover:scale-105 transition-transform">App
+                            Usuario</a>
+                        <a href="https://business.cerowait.com" target="_blank"
+                            class="px-6 py-3 glass rounded-full font-bold text-sm hover:bg-white/5">Panel Business</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Skills -->
+        <section id="skills" class="py-24 px-6">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-black mb-12 gradient-text">Formación Académica</h2>
+                    <div class="space-y-6">
+                        <div class="glass p-6 rounded-2xl reveal">
+                            <h4 class="text-accent-primary font-bold">ASIR - Grado Superior</h4>
+                            <p class="text-lg font-bold">IES Pablo Serrano</p>
+                            <p class="opacity-50 text-sm italic">2024 – Actualidad</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl reveal">
+                            <h4 class="text-accent-primary font-bold">Bachillerato Científico</h4>
+                            <p class="text-lg font-bold">IES Félix de Azara</p>
+                            <p class="opacity-50 text-sm italic">2021 – 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-black mb-12 gradient-text">Habilidades Técnicas</h2>
+                    <div class="grid grid-cols-2 gap-4 reveal">
+                        <div class="glass p-4 rounded-xl flex items-center gap-3">
+                            <i data-lucide="server" class="text-accent-primary"></i>
+                            <span class="text-sm font-medium">Proxmox</span>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-3">
+                            <i data-lucide="layers" class="text-accent-primary"></i>
+                            <span class="text-sm font-medium">K3s / K8s</span>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-3">
+                            <i data-lucide="code-2" class="text-accent-primary"></i>
+                            <span class="text-sm font-medium">Terraform</span>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-3">
+                            <i data-lucide="settings" class="text-accent-primary"></i>
+                            <span class="text-sm font-medium">Ansible</span>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-3 lg:col-span-1 col-span-2">
+                            <i data-lucide="network" class="text-accent-primary"></i>
+                            <span class="text-sm font-medium">Redes Informáticas</span>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-black mt-12 mb-8 gradient-text">Idiomas</h2>
+                    <div class="space-y-4 reveal">
+                        <div class="glass p-4 rounded-xl">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-bold">Español</span>
+                                <span
+                                    class="text-xs text-accent-primary font-bold tracking-widest uppercase">Nativo</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="h-full bg-accent-primary w-full"></div>
+                            </div>
+                        </div>
+                        <div class="glass p-4 rounded-xl">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-bold">Rumano</span>
+                                <span
+                                    class="text-xs text-accent-primary font-bold tracking-widest uppercase">Nativo</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="h-full bg-accent-primary w-full"></div>
+                            </div>
+                        </div>
+                        <div class="glass p-4 rounded-xl">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-bold">Inglés</span>
+                                <span class="text-xs text-accent-primary font-bold tracking-widest uppercase">B1
+                                    (Intermedio)</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div class="h-full bg-accent-primary w-[60%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 px-6 bg-white/[0.01]">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-black text-center mb-16 gradient-text">Experiencia Laboral</h2>
+                <div class="max-w-3xl mx-auto border-l-2 border-white/5 ml-4 md:ml-auto space-y-12">
+                    <div class="pl-8 relative reveal">
+                        <div
+                            class="absolute w-4 h-4 bg-accent-primary rounded-full -left-[9px] top-2 shadow-[0_0_10px_#00f2ff]">
+                        </div>
+                        <div class="glass p-8 rounded-2xl">
+                            <span class="text-accent-primary text-sm font-bold">2023 – 2025</span>
+                            <h3 class="text-xl font-black mt-1">Casademont Zaragoza</h3>
+                            <p class="opacity-60 mb-2">Ventas</p>
+                        </div>
+                    </div>
+                    <div class="pl-8 relative reveal">
+                        <div
+                            class="absolute w-4 h-4 bg-accent-primary rounded-full -left-[9px] top-2 shadow-[0_0_10px_#00f2ff]">
+                        </div>
+                        <div class="glass p-8 rounded-2xl">
+                            <span class="text-accent-primary text-sm font-bold">2023 – 2024</span>
+                            <h3 class="text-xl font-black mt-1">Entrenador de Fútbol</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-black mb-16 gradient-text">Contacto</h2>
+                <div class="flex flex-wrap justify-center gap-12">
+                    <a href="mailto:andreibadea2513@gmail.com" class="reveal group flex flex-col items-center gap-4">
+                        <div
+                            class="w-16 h-16 glass rounded-2xl flex items-center justify-center group-hover:border-accent-primary transition-all">
+                            <i data-lucide="mail" class="text-accent-primary"></i>
+                        </div>
+                        <span
+                            class="text-xs font-bold opacity-50 tracking-widest uppercase">andreibadea2513@gmail.com</span>
+                    </a>
+                    <a href="tel:+34642761391" class="reveal group flex flex-col items-center gap-4">
+                        <div
+                            class="w-16 h-16 glass rounded-2xl flex items-center justify-center group-hover:border-accent-primary transition-all">
+                            <i data-lucide="phone" class="text-accent-primary"></i>
+                        </div>
+                        <span class="text-xs font-bold opacity-50 tracking-widest uppercase">+34 642 76 13 91</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center opacity-30 text-xs tracking-widest uppercase">
+        <p>&copy; 2026 Andrei Marius Badea</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
